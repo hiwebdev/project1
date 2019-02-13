@@ -1,4 +1,5 @@
 * {padding: 0; margin: 0px}
-body {background-image: linear-gradient(to bottom right, #44474c , #1b1d21);
+body {background-image: url("laptop.png")};
 .button2 {position: absolute; left:0}
 a:hover polygon { fill: #00B2FF; }
+.carousel {position:absolute; left:578; top:11px; width:729px; height: 459;}
