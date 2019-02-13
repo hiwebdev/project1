@@ -1,5 +1,4 @@
 * {padding: 0; margin: 0px}
-body {background-image: url("laptop.png")};
-.button2 {position: absolute; left:0}
-a:hover polygon { fill: #00B2FF; }
-.carousel {position:absolute; left:578; top:11px; width:729px; height: 459;}
+body {background-image: url("laptop.png")}
+.svg.hover {color:white}
+.carousel {position:absolute; left:578; top:10px; width:730px; height: 460;}
