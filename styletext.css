@@ -1,6 +1,40 @@
-* {padding: 0; margin: 0px}
-body {background-image: url("laptop.png")}
-#polygon1:hover {fill:white}
-.carousel {position:absolute; left:578; top:10px; width:730px; height: 460;}
-#menutext { transform: rotate(-45deg);}
-#menutext:hover {color:#acabac;}
+* {padding: 0; margin: 0px} /*Full Screen*/
+body {
+  background-image: url("laptop.png"); /*Image from root of the folder*/
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  }
+#polygon1:hover {
+  fill:white; /*On hover background of polygon is white*/
+  }
+.carousel {
+  position:absolute;
+  left:44px;    /*Carousel position (NEEDS MORE MEDIA QUERIES)*/
+  top:11px;     /*Carousel position (NEEDS MORE MEDIA QUERIES)*/
+  width:740px;  /*Carousel dimensions (NEEDS MORE MEDIA QUERIES)*/
+  height:470px; /*Carousel dimensions (NEEDS MORE MEDIA QUERIES)*/
+  }
+#menutext {
+  transform: rotate(-45deg); /*Text on polygon is rotated to 45 degrees (NEEDS TO BE DONE FOR OTHER BROWSERS)*/
+  }
+
+
+
+
+
+
+
+
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*Media queries*/
+@media (max-width:768px){
+  /*Carousel disappears on low width screens*/
+  .carouselmedia{
+    display:none !important
+    left:44px;
+    top:11px;
+    width:0px;
+    height:0px;
+    }
