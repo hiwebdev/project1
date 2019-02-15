@@ -10,12 +10,11 @@ body {
   }
 .carousel {
   position:absolute;
-  left: 50%;     /*--Experiment with %-es, left side needs centering*/
-  margin-left: -370px;
-  /*left:56px;    /*Carousel position (NEEDS MORE MEDIA QUERIES)*/
-  top:10px;     /*Carousel position (NEEDS MORE MEDIA QUERIES)*/
-  width:740px;  /*Carousel dimensions (NEEDS MORE MEDIA QUERIES)*/
-  height:470px; /*Carousel dimensions (NEEDS MORE MEDIA QUERIES)*/
+  left: 50%;           /*Keeps carousel centered*/
+  margin-left: -370px; /*Carousel is pushed back for half of image*/
+  top:10px;            /*Carousel position (NEEDS MORE MEDIA QUERIES)*/
+  width:740px;         /*Carousel dimensions (NEEDS MORE MEDIA QUERIES)*/
+  height:470px;        /*Carousel dimensions (NEEDS MORE MEDIA QUERIES)*/
 
   }
 #menutext {
@@ -36,3 +35,9 @@ body {
     display:none !important
     }
   }
+@media (max-height:390px){
+  /*Carousel disappears on low height screens*/
+  .carouselmedia{
+    display:none !important
+    }
+}
