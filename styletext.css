@@ -10,10 +10,12 @@ body {
   }
 .carousel {
   position:absolute;
-  left:44px;    /*Carousel position (NEEDS MORE MEDIA QUERIES)*/
-  top:11px;     /*Carousel position (NEEDS MORE MEDIA QUERIES)*/
+  /*left: 50%;  --Experiment with %-es, left side needs centering*/
+  left:57px;    /*Carousel position (NEEDS MORE MEDIA QUERIES)*/
+  top:10px;     /*Carousel position (NEEDS MORE MEDIA QUERIES)*/
   width:740px;  /*Carousel dimensions (NEEDS MORE MEDIA QUERIES)*/
   height:470px; /*Carousel dimensions (NEEDS MORE MEDIA QUERIES)*/
+
   }
 #menutext {
   transform: rotate(-45deg); /*Text on polygon is rotated to 45 degrees (NEEDS TO BE DONE FOR OTHER BROWSERS)*/
@@ -25,16 +27,11 @@ body {
 
 
 
-
-
 /*--------------------------------------------------------------------------------------------------------------------------*/
 /*Media queries*/
-@media (max-width:768px){
+@media (max-width:850px){
   /*Carousel disappears on low width screens*/
   .carouselmedia{
     display:none !important
-    left:44px;
-    top:11px;
-    width:0px;
-    height:0px;
     }
+  }
