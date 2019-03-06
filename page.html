@@ -19,7 +19,7 @@
       <!--Polygons-->
       <svg height="210" width="500">
         <!--First button-->
-        <a href="https://twitter.com/">
+        <a href="#" id="myBtn1">
           <!--Polygon coordinates for first button-->
           <path id="polygon1" d="M   0   0
                    L   0  87
@@ -30,9 +30,9 @@
                 fill="#acabac"/>
                 <!--Text coordinates-->
                 <text x="0" y="70" text-anchor="middle" fill="white" font-size="20" id="menutext">Menu</text>
-        </a>
-        <!--Second buttonn-->
-        <a href="https://travishorn.com/buttons-with-custom-shapes-cabdcde7dfd1">
+              </a>
+        <!--Second button-->
+        <a href="#" id="myBtn2">
           <!--Polygon coordinates for second button-->
           <path id="polygon1" d="M   0  136
                    L  42  148
@@ -51,7 +51,78 @@
   </header>
 </div>
 <!---------------------------------------------------------------------------------------------------------------------------------------------->
+<!-- First Modal -->
+<div id="FirstModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+</div>
+<!-- Second Modal -->
+<div id="SecondModal" class="modal">
+  <!-- Modal content -->
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>Second modal text</p>
+  </div>
+</div>
 <!---------------------------------------------------------------------------------------------------------------------------------------------->
 <!---------------------------------------------------------------------------------------------------------------------------------------------->
+<script>
+// First Modal
+// Get the modal
+var modal = document.getElementById('FirstModal');
+
+// Get the button that opens the modal
+var a = document.getElementById("myBtn1");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+a.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+//-------------------------------------------------------------------
+// Second Modal
+// Get the modal
+var modal = document.getElementById('SecondModal');
+
+// Get the button that opens the modal
+var a = document.getElementById("myBtn2");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on the button, open the modal
+a.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
 </body>
 </html>
