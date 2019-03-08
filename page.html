@@ -19,9 +19,9 @@
 <div class="polygons">
     <header>
       <!--Polygons-->
-      <svg height="210" width="500">
+      <svg height="300" width="500">
         <!--First button-->
-        <a onclick="myFunction()">
+        <a onclick="myfunction()"  id="firstbutton">
           <!--Polygon coordinates for first button-->
           <path id="polygon1" d="M   0   0
                    L   0  87
@@ -33,8 +33,23 @@
                 <!--Text coordinates-->
                 <text x="0" y="70" text-anchor="middle" fill="white" font-size="20" id="menutext">Menu</text>
         </a>
+        <!--First button on click-->
+        <a id="firstbuttonclick">
+          <!--Polygon coordinates for first button-->
+          <path id="polygon1" d="M   0   0
+                   L   0  87
+                   L  22  94
+                   L  187 259
+                   L  255 191
+                   L  92  28
+                   L  85   0
+                   Z"
+                fill="#acabac"/>
+                <!--Text coordinates-->
+                <text x="0" y="70" text-anchor="middle" fill="white" font-size="20" id="menutext">Menu</text>
+        </a>
         <!--Second button-->
-        <a onclick="myFunction2()">
+        <a onclick="myFunction2()" id="secondbutton">
           <!--Polygon coordinates for second button-->
           <path id="polygon1" d="M   0  136
                    L  42  148
@@ -47,45 +62,50 @@
                    Z"
                 fill="#b1b1b1"/>
                 <!--Text coordinates-->
-                <text x="0" y="120" text-anchor="middle" fill="white" font-size="20" id="menutext">Price</text>
+                <text x="0" y="120" text-anchor="middle" fill="white" font-size="20" id="menutext">About</text>
+        </a>
+        <!--Second button on click-->
+        <a id="secondbuttonclick">
+          <!--Polygon coordinates for first button-->
+          <path id="polygon1" d="M   130 255
+                   L 126  301
+                   L 191  307
+                   L 300  222
+                   L 295  162
+                   L 251  146
+                   L 255 190
+                   L 187 258
+                   Z"
+                fill="#acabac"/>
+                <!--Text coordinates-->
+                <text x="0" y="70" text-anchor="middle" fill="white" font-size="20" id="menutext">Menu</text>
         </a>
       </svg>
   </header>
 </div>
 <!---------------------------------------------------------------------------------------------------------------------------------------------->
-<!-- Modal -->
-<!---------------------------------------------------------------------------------------------------------------------------------------------->
+
 <!---------------------------------------------------------------------------------------------------------------------------------------------->
 <script>
-//First Modal
-function myFunction() {
-// instanciate new modal
-var modal = new tingle.modal({
-    closeMethods: ['overlay', 'button', 'escape'],
-    closeLabel: "Close",
-    cssClass: ['custom-class-1', 'custom-class-2'],
-    onOpen: function() {
-        console.log('modal open');
-    },
-    onClose: function() {
-        console.log('modal closed');
-    },
-    beforeClose: function() {
-        // here's goes some logic
-        // e.g. save content before closing the modal
-        return true; // close the modal
-        return false; // nothing happens
-    }
+//Expandable menu
+function myfunction(){
+  document.getElementById('firstbutton').style.display = 'none';
+  document.getElementById('firstbuttonclick').style.display = 'inline';
+  document.getElementById('secondbutton').style.display = 'none';
+  document.getElementById('secondbuttonclick').style.display = 'inline';
+  // Detect all clicks on the document
+				var $bt1 = $(".firstbuttonclick");
+				var $bt2 = $(".secondbuttonclick");
+        document.addEventListener("click", function(event) {
+          // If user clicks inside the element, do nothing
+          if ((event.target.closest("$firstbuttonclick")) || (event.target.closest("$secondbuttonclick")) ) return;
+
+          // If user clicks outside the element, hide it!
+          document.getElementById('firstbutton').style.display = 'inline';
+          document.getElementById('firstbuttonclick').style.display = 'none';
+          document.getElementById('secondbutton').style.display = 'inline';
+          document.getElementById('secondbuttonclick').style.display = 'none';
 });
-
-// set content
-modal.setContent('<h1>here\'s some content</h1>');
-
-// open modal
-modal.open();
-
-// close modal
-modal.close();
 }
 //-------------------------------------------------------------------------------------------------
 //Second modal
