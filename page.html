@@ -94,19 +94,25 @@ function myfunction(){
   document.getElementById('secondbutton').style.display = 'none';
   document.getElementById('secondbuttonclick').style.display = 'inline';
   // Detect all clicks on the document
-				var $bt1 = $(".firstbuttonclick");
-				var $bt2 = $(".secondbuttonclick");
-        document.addEventListener("click", function(event) {
-          // If user clicks inside the element, do nothing
-          if ((event.target.closest("$firstbuttonclick")) || (event.target.closest("$secondbuttonclick")) ) return;
-
-          // If user clicks outside the element, hide it!
-          document.getElementById('firstbutton').style.display = 'inline';
-          document.getElementById('firstbuttonclick').style.display = 'none';
-          document.getElementById('secondbutton').style.display = 'inline';
-          document.getElementById('secondbuttonclick').style.display = 'none';
-});
-}
+  var button1 = document.getElementById('firstbuttonclick');
+  var button2 = document.getElementById('secondbuttonclick');
+  document.addEventListener("click", function() {myfunctionclick(button1, button2);});
+  function myfunctionclick(){
+    var targetElement = evt.target;
+    do {
+      if ((targetElement != button1) && (targetElement != button2)) {
+          // This is a click inside.
+          document.getElementById("firstbutton").style.display = 'inline' ;
+          document.getElementById("firstbuttonclick").style.display = 'none' ;
+          document.getElementById("secondbutton").style.display = 'inline' ;
+          document.getElementById("secondbuttonclick").style.display = 'none' ;
+          return;
+      }
+      // Go up the DOM
+      targetElement = targetElement.parentNode;
+  } while (targetElement);
+  }
+};
 //-------------------------------------------------------------------------------------------------
 //Second modal
 function myFunction2() {
