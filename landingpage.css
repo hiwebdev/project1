@@ -1,0 +1,63 @@
+/* ---- reset ---- */
+
+body {
+  margin: 0;
+  background-color: #17182f !important;
+}
+
+canvas {
+  display: block;
+  vertical-align: bottom;
+}
+
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.logo {
+  padding: 0;
+  position:absolute;
+  top:50%;
+  left:50%;
+  padding:10px;
+}
+.logo:hover {
+  animation-name: top, left, bottom, right;
+  animation-duration: 11s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  }
+@keyframes top {
+    0%     {border-top:0px none white;}
+    4.55%  {border-top:1px solid white;}
+    90.90% {border-top:1px solid white;}
+    90.91% {border-top:0px none white;}
+    100%   {border-top:0px none white;}
+  }
+  @keyframes left {
+    0%     {border-left:0px none white;}
+    27.27% {border-left:1px solid white;}
+    90.90% {border-left:1px solid white;}
+    90.91% {border-left:0px none white;}
+    100%   {border-left:0px none white;}
+  }
+  @keyframes bottom {
+    0%     {border-bottom:0px none white;}
+    50%    {border-bottom:1px solid white;}
+    90.90% {border-bottom:1px solid white;}
+    90.91% {border-bottom:0px none white;}
+    100%   {border-bottom:0px none white;}
+  }
+  @keyframes right {
+    0%     {border-right:0px none white;}
+    72.73% {border-right:1px solid white;}
+    90.90% {border-right:1px solid white;}
+    90.91% {border-right:0px none white;}
+    100%   {border-right:0px none white;}
+  }
+/*Needs variations based by browser*/
+/*LOGO gets squezed by borders*/
